@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+
+            <!-- Title row with "Input Data" title -->
+            <TableRow
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_span="2"
+                    android:background="#011347"
+                    android:gravity="center"
+                    android:text="Input Data"
+                    android:textColor="@color/white"
+                    android:textSize="40dp" />
+            </TableRow>
+
+            <!-- Helper row to create black line -->
+            <TableRow
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="2dp"
+                    android:background="#011347"
+                    android:layout_span="2"/>
+            </TableRow>
+
+            <!-- Row for entry of name of the exercise -->
+            <TableRow
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:text="Exercise:"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/white"/>
+
+                <EditText
+                    android:id="@+id/exercise_edittext"
+                    android:text=""
+                    android:hint="enter"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:backgroundTint="@color/white" />
+            </TableRow>
+
+            <!-- Row for entry of number of sets of the exercise -->
+            <TableRow>
+                <TextView
+                    android:text="Sets:"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/white"/>
+
+                <EditText
+                    android:id="@+id/sets_edittext"
+                    android:text=""
+                    android:hint="enter"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:backgroundTint="@color/white" />
+            </TableRow>
+
+            <!-- Row for entry of number of reps of the exercise -->
+            <TableRow>
+                <TextView
+                    android:text="Reps:"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/white"/>
+
+                <EditText
+                    android:id="@+id/reps_edittext"
+                    android:text=""
+                    android:hint="enter"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:backgroundTint="@color/white" />
+            </TableRow>
+
+            <!-- Row for entry of weight used in exercise -->
+            <TableRow>
+                <TextView
+                    android:text="Weight:"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:backgroundTint="@color/white"/>
+
+                <EditText
+                    android:id="@+id/weight_edittext"
+                    android:text=""
+                    android:hint="enter"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:backgroundTint="@color/white" />
+            </TableRow>
+
+            <!-- Helper row to create black line -->
+            <TableRow
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="2dp"
+                    android:background="#011347"
+                    android:layout_span="2"/>
+            </TableRow>
+
+            <!-- button that executes action to insert data from edittext fields into DB -->
+            <TableRow
+                android:layout_marginTop="30dp">
+                <Button
+                    android:id="@+id/new_entry_insert_button"
+                    android:layout_width="144dp"
+                    android:layout_height="100dp"
+                    android:text="ENTER"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_span="2"
+                    android:onClick="insertIntoDB"
+                    android:backgroundTint="#056C0A"
+                    android:textSize="40dp"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

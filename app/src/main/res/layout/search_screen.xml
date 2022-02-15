@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+
+            <!-- Row for entry of date of training session to be searched -->
+            <TableRow
+                android:layout_marginTop="200dp">
+                <TextView
+                    android:text="Exercise:"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="40dp"
+                    android:backgroundTint="@color/white"/>
+
+                <EditText
+                    android:id="@+id/training_date_edittext"
+                    android:text=""
+                    android:hint="enter"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:backgroundTint="@color/white" />
+            </TableRow>
+
+            <!-- Row that displays hint on how to enter date format -->
+            <TableRow
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:textSize="20dp"
+                    android:text="Please enter date as dd.mm.yy"
+                    android:textColor="@color/black"
+
+                    android:layout_gravity="center"
+                    android:background="#FCFCFD"
+                    android:layout_span="2"/>
+            </TableRow>
+
+            <!-- button that executes action to search DB for date specified in edittext -->
+            <TableRow
+                android:layout_marginTop="30dp">
+                <Button
+                    android:id="@+id/entry_search_button"
+                    android:layout_width="144dp"
+                    android:layout_height="100dp"
+                    android:text="SEARCH"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_span="2"
+                    android:onClick="searchDBForDate"
+                    android:backgroundTint="#EF125D"
+                    android:textSize="40dp"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
